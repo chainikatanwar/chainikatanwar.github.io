@@ -8,14 +8,14 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg: #0E1A2F; --bg-alt: #12203A; --surface: #13223D; --ink: #E6EDF7; --muted: #94A3B8;
   --line: #22344F; --accent: #64FFDA; --chip: #0F1C33;
   --grad: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
   color-scheme: dark;
-  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --display: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
   --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
   box-sizing: border-box;
   padding-top: env(safe-area-inset-top, 0px);
@@ -34,7 +34,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
 header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: var(--bg); border-bottom: 1px solid var(--line); }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 76px; }
-.mark { font-family: var(--display); font-weight: 800; font-size: 20px; text-decoration: none; color: var(--accent); border: 2px solid var(--accent); border-radius: 6px; padding: 6px 10px; line-height: 1; }
+.mark { font-family: var(--display); font-weight: 700; font-size: 20px; text-decoration: none; color: var(--accent); border: 2px solid var(--accent); border-radius: 6px; padding: 6px 10px; line-height: 1; }
 .nav ul { display: flex; gap: 32px; list-style: none; margin: 0; padding: 0; }
 .nav ul a { text-decoration: none; color: var(--ink); font-size: 16px; }
 .nav ul a:hover { color: var(--accent); }
@@ -45,8 +45,8 @@ header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; backg
 .hero-text { align-self: center; padding: 80px 48px 96px max(24px, calc((100vw - 1120px) / 2 + 24px)); }
 .hero-visual { background: var(--grad); clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%); display: flex; align-items: center; justify-content: center; padding: 64px 40px 64px calc(40px + 7%); }
 .hello { color: var(--accent); font-weight: 600; margin: 0 0 8px; }
-h1 { font-family: var(--display); font-weight: 800; font-size: clamp(48px, 7vw, 84px); line-height: 0.98; letter-spacing: -0.035em; margin: 0 0 16px; }
-.role { font-family: var(--display); font-weight: 500; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.25; color: var(--muted); margin: 0 0 24px; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(44px, 6vw, 76px); line-height: 1.05; letter-spacing: -0.025em; margin: 0 0 16px; }
+.role { font-family: var(--display); font-weight: 500; letter-spacing: -0.01em; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.25; color: var(--muted); margin: 0 0 24px; }
 .pitch { max-width: 34em; margin: 0 0 36px; color: var(--muted); }
 .stats { display: grid; grid-template-columns: repeat(3, auto); gap: 32px; justify-content: start; margin: 0 0 40px; padding: 0; list-style: none; }
 .stats strong { display: block; font-family: var(--display); font-weight: 700; font-size: 34px; line-height: 1.1; letter-spacing: -0.02em; color: var(--accent); }
@@ -70,7 +70,7 @@ h1 { font-family: var(--display); font-weight: 800; font-size: clamp(48px, 7vw, 
 /* Sections */
 section.block { padding: 88px 0; }
 section.block.alt { background: var(--bg-alt); }
-h2 { font-family: var(--display); font-weight: 700; font-size: clamp(32px, 4vw, 46px); line-height: 1.1; letter-spacing: -0.025em; margin: 0 0 14px; text-align: center; }
+h2 { font-family: var(--display); font-weight: 700; font-size: clamp(30px, 3.6vw, 42px); line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 14px; text-align: center; }
 h2::after { content: ""; display: block; width: 72px; height: 4px; border-radius: 2px; background: var(--grad); margin: 18px auto 0; }
 .lede { color: var(--muted); max-width: 40em; margin: 0 auto 52px; text-align: center; }
 .about p { max-width: 42em; margin: 0 auto 20px; color: var(--muted); text-align: center; }
@@ -84,7 +84,7 @@ h2::after { content: ""; display: block; width: 72px; height: 4px; border-radius
 .where { color: var(--accent); font-size: 15px; font-weight: 600; margin: 0 0 12px; }
 .work p.detail { margin: 0; max-width: 40em; color: var(--muted); }
 .impact { border-left: 3px solid var(--accent); padding-left: 18px; align-self: start; }
-.impact strong { display: block; font-family: var(--display); font-weight: 800; font-size: 32px; line-height: 1.1; letter-spacing: -0.02em; color: var(--accent); }
+.impact strong { display: block; font-family: var(--display); font-weight: 700; font-size: 32px; line-height: 1.1; letter-spacing: -0.02em; color: var(--accent); }
 .impact span { color: var(--muted); font-size: 15px; line-height: 1.4; display: block; }
 @media (max-width: 760px) { .work li { grid-template-columns: 1fr; gap: 16px; } }
 
