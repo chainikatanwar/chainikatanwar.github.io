@@ -90,6 +90,24 @@ h2::after { content: ""; display: block; width: 72px; height: 4px; border-radius
 .impact-link:hover { text-decoration: underline; }
 @media (max-width: 760px) { .work li { grid-template-columns: 1fr; gap: 16px; } }
 
+/* Mobile navigation: keep every primary destination reachable on narrow screens */
+@media (max-width: 720px) {
+  .nav { gap: 10px; }
+  .nav ul { flex: 1 1 0; min-width: 0; justify-content: flex-start; overflow-x: auto; white-space: nowrap; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding: 8px 2px; }
+  .nav ul::-webkit-scrollbar { display: none; }
+  .nav ul li { flex: 0 0 auto; }
+  .nav ul a { font-size: 14px; }
+  .wrap { padding-left: 18px; padding-right: 18px; }
+}
+.evidence-map-wrap { max-width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); -webkit-overflow-scrolling: touch; }
+.evidence-map { width: 100%; min-width: 720px; border-collapse: collapse; font-size: 16px; }
+.evidence-map th, .evidence-map td { padding: 18px 20px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.evidence-map thead th { color: var(--accent); font-family: var(--display); font-size: 15px; }
+.evidence-map tbody th { width: 23%; color: var(--ink); font-family: var(--display); font-size: 16px; }
+.evidence-map td { color: var(--muted); }
+.evidence-map a { color: var(--accent); font-weight: 600; text-underline-offset: 3px; white-space: nowrap; }
+.evidence-map tr:last-child th, .evidence-map tr:last-child td { border-bottom: 0; }
+
 /* Case studies */
 .cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .case { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 30px; display: flex; flex-direction: column; }
@@ -149,6 +167,7 @@ footer { background: var(--bg-alt); border-top: 1px solid var(--line); padding: 
       <li><a href="#work">Impact</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#professional-case-studies">Case studies</a></li>
+      <li class="optional"><a href="#competency-evidence">Evidence map</a></li>
       <li><a href="#case-studies">Independent work</a></li>
       <li class="optional"><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -225,6 +244,28 @@ footer { background: var(--bg-alt); border-top: 1px solid var(--line); padding: 
       <p class="competency-footnote">Professional examples reflect my technical ownership and delivery leadership; policy and product-scope authority remained with the relevant Product, Tax or Legal stakeholders.</p>
     </div>
   </section>
+
+  
+<section class="block alt" id="competency-evidence">
+  <div class="wrap">
+    <h2>Competency to evidence</h2>
+    <p class="lede">A recruiter-friendly view of the product and program capabilities behind the outcomes—with direct links to the decisions, trade-offs and delivery evidence.</p>
+    <div class="evidence-map-wrap" role="region" aria-label="Competency to evidence map" tabindex="0">
+      <table class="evidence-map">
+        <thead><tr><th scope="col">Competency</th><th scope="col">Evidence from my work</th><th scope="col">Proof</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Problem framing &amp; requirements</th><td>Translated DAC7 obligations into host data collection, validation, protected reporting and payout-compliance workflows across 27 EU markets.</td><td><a href="case-studies/#dac7">DAC7 case study ↗</a></td></tr>
+          <tr><th scope="row">Platform strategy &amp; architecture</th><td>Designed a Tax-owned rules service and embedded client approach that removed tax changes from Search releases without adding request latency.</td><td><a href="case-studies/#tax">Tax platform case study ↗</a></td></tr>
+          <tr><th scope="row">Prioritization &amp; trade-offs</th><td>Negotiated delivery scope and fallback paths for DAC7; sequenced invoice authorization by operational risk and business criticality.</td><td><a href="case-studies/#dac7">DAC7 decisions ↗</a> <span class="evidence-separator">·</span> <a href="case-studies/#invoice">Invoice rollout ↗</a></td></tr>
+          <tr><th scope="row">Cross-functional influence</th><td>Aligned Engineering, Tax, Search, Product, Legal and Operations around technical options, ownership boundaries and release readiness.</td><td><a href="case-studies/#tax">Tax alignment ↗</a> <span class="evidence-separator">·</span> <a href="case-studies/#invoice">Invoice adoption ↗</a></td></tr>
+          <tr><th scope="row">Program execution &amp; governance</th><td>Led multi-track delivery, coordinated 6–10 engineers, managed dependencies and deadline risk, and established production monitoring.</td><td><a href="case-studies/#dac7">DAC7 delivery ↗</a></td></tr>
+          <tr><th scope="row">Launch, adoption &amp; operational readiness</th><td>Moved all 12 invoice-consuming teams to authenticated calls with a phased migration, named support, rollback control and post-launch monitoring.</td><td><a href="case-studies/#invoice">Invoice authorization ↗</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="competency-footnote">These examples demonstrate technical product and program leadership performed in an engineering role. Product policy and business-scope authority remained with the relevant Product, Tax and Legal stakeholders.</p>
+  </div>
+</section>
 
   <section class="block" id="work">
     <div class="wrap">
