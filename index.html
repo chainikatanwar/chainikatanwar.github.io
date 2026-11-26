@@ -106,6 +106,18 @@ h2::after { content: ""; display: block; width: 72px; height: 4px; border-radius
 .note { color: var(--muted); font-size: 15px; margin: 28px 0 0; text-align: center; }
 @media (max-width: 860px) { .cases { grid-template-columns: 1fr; } .case.lead dl { grid-template-columns: 1fr; gap: 14px; } }
 
+/* Product leadership competencies */
+.competencies { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.competency { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 28px; }
+.competency-kicker { margin: 0 0 10px; color: var(--accent); font-size: 14px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.competency h3 { margin: 0 0 12px; font-family: var(--display); font-size: 21px; line-height: 1.3; }
+.competency > p:not(.competency-kicker) { color: var(--muted); margin: 0 0 14px; }
+.competency .evidence { font-size: 15px; line-height: 1.45; }
+.competency a { color: var(--accent); font-size: 15px; font-weight: 600; text-underline-offset: 3px; }
+.evidence-separator { color: var(--muted); margin: 0 8px; }
+.competency-footnote { color: var(--muted); font-size: 14px; text-align: center; max-width: 850px; margin: 26px auto 0; }
+@media (max-width: 760px) { .competencies { grid-template-columns: 1fr; } }
+
 /* Timeline */
 .timeline { list-style: none; margin: 0 auto; padding: 0; border-left: 2px solid var(--line); max-width: 760px; }
 .timeline li { position: relative; padding: 0 0 32px 28px; }
@@ -170,9 +182,47 @@ footer { background: var(--bg-alt); border-top: 1px solid var(--line); padding: 
 
   <section class="block alt" id="about">
     <div class="wrap about">
-      <h2>About me</h2>
-      <p>My foundation is in software engineering, but the work I have gravitated towards is broader: identifying business and operational problems, shaping requirements, evaluating solution options and aligning teams around delivery. At Agoda, I worked on regulatory and platform initiatives spanning property hosts, Tax, Legal, Support and Engineering.</p>
-      <p>I bring technical depth to product decisions: translating business needs into platform capabilities, negotiating scope, making trade-offs visible and driving execution through rollout and measurement. My experience spans compliance, tax rules, seller data, invoicing and security systems. I completed the Airtribe Product Management Launchpad in October 2026 to deepen my product discovery, prioritisation and strategy toolkit.</p>
+      <h2>Technical product leadership</h2>
+      <p>I work at the intersection of business problems, product decisions and engineering execution. Across seven years in travel technology, I have taken ambiguous regulatory and operational challenges and turned them into platform capabilities used across markets and teams—from a new EU compliance workflow to centrally managed tax rules and secure invoice services.</p>
+      <p>My strength is connecting the dots: understanding the user and business constraint, making technical and operational options clear, aligning the right stakeholders, and leading teams through delivery, rollout and production feedback. I have owned technical direction and delivery on major initiatives while partnering with Product, Tax and Legal on policy, scope and business decisions. I bring hands-on system design experience alongside formal product training from the Airtribe Product Management Launchpad.</p>
+    </div>
+  </section>
+
+  <section class="block" id="competencies">
+    <div class="wrap">
+      <h2>Product leadership in practice</h2>
+      <p class="lede">A practical framework for how I take complex platform problems from ambiguity to measurable outcomes—grounded in shipped work, not just a list of methods.</p>
+      <div class="competencies">
+        <article class="competency">
+          <p class="competency-kicker">01 · Frame the problem</p>
+          <h3>Problem framing &amp; requirements</h3>
+          <p>Translate regulatory, operational and user needs into clear problem statements, constraints and delivery requirements. Separate what must be solved now from what can wait.</p>
+          <p class="evidence">Evidence: DAC7 seller-data collection and reporting requirements across 27 EU markets.</p>
+          <a href="case-studies/#dac7">See DAC7 case study →</a>
+        </article>
+        <article class="competency">
+          <p class="competency-kicker">02 · Shape the solution</p>
+          <h3>Platform strategy &amp; systems thinking</h3>
+          <p>Connect workflows, APIs, data, reliability and adoption into a reusable platform approach. Evaluate options against user impact, security, latency and long-term operability.</p>
+          <p class="evidence">Evidence: Central Tax Rules Service, designed to decouple tax changes from Search releases without adding Search latency.</p>
+          <a href="case-studies/#tax">See Tax Rules case study →</a>
+        </article>
+        <article class="competency">
+          <p class="competency-kicker">03 · Make the trade-offs</p>
+          <h3>Prioritization &amp; decision-making</h3>
+          <p>Negotiate scope, surface dependencies and delivery risks, compare solution paths and sequence work around deadlines and business criticality.</p>
+          <p class="evidence">Evidence: DAC7 scope and delivery trade-offs; risk-ordered invoice authorization rollout.</p>
+          <a href="case-studies/#dac7">Explore DAC7</a><span class="evidence-separator">·</span><a href="case-studies/#invoice">Explore Invoice Authorization →</a>
+        </article>
+        <article class="competency">
+          <p class="competency-kicker">04 · Deliver &amp; learn</p>
+          <h3>Cross-functional execution &amp; outcomes</h3>
+          <p>Align Engineering and business partners, manage rollout risk, establish operational signals and use production feedback to validate that the solution works.</p>
+          <p class="evidence">Evidence: 12 invoice-consuming teams migrated with rollback controls and post-rollout invoice monitoring.</p>
+          <a href="case-studies/#invoice">See Invoice Authorization case study →</a>
+        </article>
+      </div>
+      <p class="competency-footnote">Professional examples reflect my technical ownership and delivery leadership; policy and product-scope authority remained with the relevant Product, Tax or Legal stakeholders.</p>
     </div>
   </section>
 
