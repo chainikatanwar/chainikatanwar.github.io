@@ -86,6 +86,8 @@ h2::after { content: ""; display: block; width: 72px; height: 4px; border-radius
 .impact { border-left: 3px solid var(--accent); padding-left: 18px; align-self: start; }
 .impact strong { display: block; font-family: var(--display); font-weight: 700; font-size: 32px; line-height: 1.1; letter-spacing: -0.02em; color: var(--accent); }
 .impact span { color: var(--muted); font-size: 15px; line-height: 1.4; display: block; }
+.impact-link { display: inline-block; margin-top: 12px; color: var(--accent); font-size: 14px; font-weight: 600; text-decoration: none; text-underline-offset: 3px; }
+.impact-link:hover { text-decoration: underline; }
 @media (max-width: 760px) { .work li { grid-template-columns: 1fr; gap: 16px; } }
 
 /* Case studies */
@@ -185,7 +187,7 @@ footer { background: var(--bg-alt); border-top: 1px solid var(--line); padding: 
             <p class="where">Agoda</p>
             <p class="detail">A new EU law required Agoda to collect, verify and report identity and income data for every property host, by a fixed legal deadline, with no system in place. I led the technical delivery end to end: a seller data workflow in the partner portal, a PII-safe reporting pipeline, and automatic payout unblocking once hosts complied, aligning with Product and Legal on policy and scope.</p>
           </div>
-          <div class="impact"><strong>$27M</strong><span>estimated penalties avoided; about 97K properties brought into compliance</span></div>
+          <div class="impact"><strong>$27M</strong><span>estimated penalties avoided; about 97K properties brought into compliance</span><a class="impact-link" href="case-studies/#dac7">Explore DAC7 case study →</a></div>
         </li>
         <li>
           <div>
@@ -193,7 +195,7 @@ footer { background: var(--bg-alt); border-top: 1px solid var(--line); padding: 
             <p class="where">Agoda</p>
             <p class="detail">Tax exemptions were hard-coded in the search engine, owned by another team, with no audit trail. I designed an API-driven rules service with an embedded, cached library that added no search latency, and won over a reluctant Search team by building the design around their goals.</p>
           </div>
-          <div class="impact"><strong>10 days → minutes</strong><span>per tax rule change; 5 jurisdictions onboarded</span></div>
+          <div class="impact"><strong>10 days → minutes</strong><span>per tax rule change; 5 jurisdictions onboarded</span><a class="impact-link" href="case-studies/#tax">Explore Tax Rules case study →</a></div>
         </li>
         <li>
           <div>
@@ -201,7 +203,7 @@ footer { background: var(--bg-alt); border-top: 1px solid var(--line); padding: 
             <p class="where">Agoda</p>
             <p class="detail">After wrong invoices went out and no caller could be traced, I added Open Policy Agent authorization to about 30 open endpoints and led a risk-ordered rollout, with a rollback flag and invoice-volume monitoring at every step.</p>
           </div>
-          <div class="impact"><strong>12 teams</strong><span>onboarded with minimal downtime</span></div>
+          <div class="impact"><strong>12 teams</strong><span>onboarded with minimal downtime</span><a class="impact-link" href="case-studies/#invoice">Explore Invoice Authorization case study →</a></div>
         </li>
         <li>
           <div>
