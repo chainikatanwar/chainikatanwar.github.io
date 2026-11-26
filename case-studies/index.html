@@ -12,7 +12,7 @@
 :root{--bg:#0E1A2F;--alt:#12203A;--surface:#13223D;--ink:#E6EDF7;--muted:#A6B4C8;--line:#2A3D59;--accent:#64FFDA;--display:"Plus Jakarta Sans",system-ui,sans-serif;--body:"Source Sans 3",system-ui,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.65 var(--body)}a{color:var(--accent)}.wrap{max-width:1080px;margin:auto;padding:0 24px}
 header{position:sticky;top:0;background:rgba(14,26,47,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:5}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.mark{font:700 19px var(--display);color:var(--accent);text-decoration:none;border:2px solid var(--accent);padding:5px 9px;border-radius:6px}.nav a:not(.mark){text-decoration:none;font-size:16px}
-.case-nav{position:sticky;top:72px;z-index:4;background:rgba(14,26,47,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.recruiter-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:30px}.recruiter-summary>div{background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:18px}.recruiter-summary strong{display:block;color:var(--accent);font:600 16px var(--display);margin-bottom:6px}.recruiter-summary span{display:block;color:var(--muted);font-size:15px;line-height:1.45}@media(max-width:700px){.recruiter-summary{grid-template-columns:1fr}}.case-nav{position:sticky;top:72px;z-index:4;background:rgba(14,26,47,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .case-nav-inner{display:flex;gap:10px;overflow-x:auto;white-space:nowrap;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
 .case-nav-inner::-webkit-scrollbar{display:none}
 .case-nav a{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid var(--line);border-radius:7px;text-decoration:none;font-size:14px;font-weight:600}
@@ -32,9 +32,13 @@ main{padding:28px 0 90px}.case{padding:62px 0;border-bottom:1px solid var(--line
 <section class="hero"><div class="wrap">
 <p class="eyebrow">Selected professional work · Agoda</p>
 <h1>Turning complex constraints into dependable platform products.</h1>
-<p>These case studies show how I frame problems, evaluate technical options, negotiate scope, align stakeholders and lead delivery. My formal role was Senior Software Engineer; the product ownership described below is specific to each initiative and is attributed accordingly.</p>
-
-</div></section>
+<p>These shipped initiatives demonstrate technical product leadership: framing ambiguous problems, translating regulatory and operational needs into system requirements, evaluating architecture and integration options, negotiating scope, aligning partner teams, and owning delivery through rollout and production feedback. My formal role was Senior Software Engineer; ownership is attributed initiative by initiative, with policy and business decisions retained by Product, Tax and Legal where applicable.</p>
+<div class="recruiter-summary" aria-label="Technical product leadership summary">
+<div><strong>Problem &amp; requirements</strong><span>Converted regulatory, tax and operational constraints into clear workflows and platform requirements.</span></div>
+<div><strong>Technical decisions</strong><span>Designed services, data paths, APIs, caching, validation, security controls and failure fallbacks.</span></div>
+<div><strong>Influence &amp; delivery</strong><span>Aligned Product, Tax, Legal, Data, Search and 12 consuming engineering teams; sequenced rollout and adoption.</span></div>
+<div><strong>Operational outcomes</strong><span>Delivered across 27 EU markets, reduced tax-rule change time from ~10 days to ~1 minute, and migrated 12 teams to authenticated invoice calls.</span></div>
+</div></div></section>
 <nav class="case-nav" aria-label="Jump to a case study">
   <div class="wrap case-nav-inner">
     <a href="#dac7">01 <span>EU DAC7 compliance</span></a>
