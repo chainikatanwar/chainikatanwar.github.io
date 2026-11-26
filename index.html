@@ -134,7 +134,8 @@ footer { background: var(--bg-alt); border-top: 1px solid var(--line); padding: 
       <li class="optional"><a href="#about">About</a></li>
       <li><a href="#work">Impact</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#case-studies">Selected work</a></li>
+      <li><a href="#professional-case-studies">Case studies</a></li>
+      <li><a href="#case-studies">Independent work</a></li>
       <li class="optional"><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -242,10 +243,50 @@ footer { background: var(--bg-alt); border-top: 1px solid var(--line); padding: 
     </div>
   </section>
 
+  <section class="block" id="professional-case-studies">
+    <div class="wrap">
+      <h2>Selected technical product case studies</h2>
+      <p class="lede">How I translated regulatory, operational and platform problems into shipped systems—covering the decisions, trade-offs, cross-team alignment and rollout controls behind the outcomes.</p>
+      <div class="cases">
+        <article class="case lead">
+          <h3>EU DAC7 compliance platform</h3>
+          <p class="type">Regulatory technology · Project owner and technical lead</p>
+          <dl>
+            <div><dt>Challenge</dt><dd>Build seller-data collection and a PII-safe reporting path from zero, across 27 EU markets, against a fixed legal deadline.</dd></div>
+            <div><dt>Product decisions</dt><dd>Legal-minimum data collection, EU validation API with country fallback, separate encrypted reporting path, filing-vendor risk call and automatic payout unblocking.</dd></div>
+            <div><dt>Outcome</dt><dd>Filed on time; about 97K properties could restore payouts by submitting data; ~$27M in estimated penalties avoided (Tax team estimate).</dd></div>
+          </dl>
+          <a class="link" href="case-studies/#dac7">Explore the case study →</a>
+        </article>
+        <article class="case">
+          <h3>Central Tax Rules Service</h3>
+          <p class="type">Internal platform · System designer and owner</p>
+          <dl>
+            <div><dt>Challenge</dt><dd>Tax changes depended on Search code releases, taking about 10 days and leaving no audit trail.</dd></div>
+            <div><dt>Product decisions</dt><dd>Authenticated API, auditable rules, embedded client library, in-process cache and bounded propagation SLA.</dd></div>
+            <div><dt>Outcome</dt><dd>Rule changes reduced to about a minute; five jurisdictions onboarded with no added Search latency.</dd></div>
+          </dl>
+          <a class="link" href="case-studies/#tax">Explore the case study →</a>
+        </article>
+        <article class="case">
+          <h3>Invoice System Authorization</h3>
+          <p class="type">Platform security · Initiated and led rollout</p>
+          <dl>
+            <div><dt>Challenge</dt><dd>About 30 shared invoice endpoints were open to internal callers, making incorrect invoices difficult to trace.</dd></div>
+            <div><dt>Product decisions</dt><dd>OPA integration, risk-ordered migration, named consumer support, owner resolution and reversible rollout control.</dd></div>
+            <div><dt>Outcome</dt><dd>12 consuming teams moved to authenticated calls; a quarter of post-rollout monitoring showed normal invoice issuance.</dd></div>
+          </dl>
+          <a class="link" href="case-studies/#invoice">Explore the case study →</a>
+        </article>
+      </div>
+      <p class="note">Formal roles are listed in Experience. Case studies distinguish my technical ownership and delivery leadership from decisions retained by Product, Legal, Tax or platform teams.</p>
+    </div>
+  </section>
+
   <section class="block alt" id="case-studies">
     <div class="wrap">
-      <h2>Product case studies</h2>
-      <p class="lede">Product work from the Airtribe Product Management Launchpad, from user research to strategy and specs.</p>
+      <h2>Independent product work</h2>
+      <p class="lede">Selected concept projects from the Airtribe Product Management Launchpad, showing discovery, strategy, PRDs and technical product thinking. These are separate from my professional delivery experience.</p>
       <div class="cases">
         <article class="case lead">
           <h3>Commitment Loop for Fireflies.ai</h3>
