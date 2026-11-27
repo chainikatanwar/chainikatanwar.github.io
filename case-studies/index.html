@@ -25,6 +25,60 @@ main{padding:28px 0 90px}.case{padding:62px 0;border-bottom:1px solid var(--line
 .diagram{background:#0B1628;border:1px solid var(--line);border-radius:10px;padding:22px;margin-top:28px;overflow:hidden}.diagram h3{font:600 19px var(--display);margin:0 0 16px}.flow{display:flex;align-items:stretch;gap:9px;flex-wrap:wrap}.node{flex:1 1 135px;min-width:120px;border:1px solid #3B5876;background:#142744;border-radius:8px;padding:13px;text-align:center;font-size:15px;color:var(--ink)}.node b{display:block;color:var(--accent);font-family:var(--display);font-size:15px;margin-bottom:5px}.arrow{align-self:center;color:var(--accent);font-size:22px}.caption{font-size:14px;color:var(--muted);margin:12px 0 0}
 .takeaway{margin-top:24px;padding:20px 22px;border-left:3px solid var(--accent);background:var(--alt)}.takeaway strong{font-family:var(--display)}.takeaway p{color:var(--muted);margin:5px 0 0}.back{display:inline-block;margin-top:36px;text-decoration:none;border:1px solid var(--accent);border-radius:6px;padding:10px 16px}footer{border-top:1px solid var(--line);padding:24px;color:var(--muted);font-size:15px;text-align:center}
 @media(max-width:700px){.wrap{padding-left:18px;padding-right:18px}.case-nav{top:72px}.case-nav a{padding:8px 10px}.grid{grid-template-columns:1fr}.wide{grid-column:auto}.case-head{grid-template-columns:1fr}.metric{flex:1 1 130px}.arrow{display:none}.flow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.node{min-width:0}.decision{font-size:14px}.decision th,.decision td{padding:8px}}
+
+/* Mobile-first refinements: readable cards, diagrams and decision tables */
+@media(max-width:700px){
+  body{font-size:16px;line-height:1.58}
+  .wrap{padding-left:16px;padding-right:16px}
+  .hero{padding:44px 0 34px}
+  .hero h1{font-size:clamp(30px,9vw,40px);line-height:1.12}
+  .hero p{font-size:15px}
+  .recruiter-summary{grid-template-columns:1fr;gap:10px;margin-top:22px}
+  .recruiter-summary>div{padding:15px}
+  .case-nav{top:64px}
+  .case-nav-inner{gap:8px;padding-top:8px;padding-bottom:8px}
+  .case-nav a{font-size:13px;padding:8px 10px}
+  .case{padding:40px 0;scroll-margin-top:125px}
+  .case-head{display:block}
+  .case h2{font-size:29px;line-height:1.18}
+  .sub{font-size:14px;line-height:1.45}
+  .summary{font-size:16px}
+  .metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:20px 0}
+  .metric{min-width:0;padding:12px;border-radius:8px}
+  .metric strong{font-size:21px;line-height:1.2;overflow-wrap:anywhere}
+  .metric span{font-size:13px;line-height:1.35}
+  .grid{grid-template-columns:minmax(0,1fr);gap:12px;margin-top:18px}
+  .wide{grid-column:auto}
+  .panel{padding:17px;border-radius:9px;min-width:0}
+  .panel h3,.diagram h3{font-size:17px}
+  .panel p,.panel li{font-size:15px}
+  .panel ul{padding-left:18px}
+  .table-scroll{overflow:visible;border-radius:0}
+  .decision{min-width:0;width:100%;display:block;font-size:14px}
+  .decision thead{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .decision tbody{display:grid;gap:10px}
+  .decision tr{display:block;background:#0F1D33;border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+  .decision td{display:block;padding:7px 0;border:0;line-height:1.45;overflow-wrap:anywhere}
+  .decision td+td{border-top:1px solid rgba(166,180,200,.16)}
+  .decision td:nth-child(1){color:var(--accent);font-weight:700;font-family:var(--display);font-size:15px}
+  .decision td:nth-child(2)::before{content:"Options considered";display:block;color:var(--ink);font-weight:600;font-size:12px;margin-bottom:2px}
+  .decision td:nth-child(3)::before{content:"Decision and rationale";display:block;color:var(--ink);font-weight:600;font-size:12px;margin-bottom:2px}
+  .decision td:nth-child(4)::before{content:"Ownership";display:block;color:var(--ink);font-weight:600;font-size:12px;margin-bottom:2px}
+  .diagram{padding:16px;margin-top:18px}
+  .flow{display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+  .node{width:100%;min-width:0;text-align:left;padding:12px 14px;font-size:14px}
+  .node b{font-size:14px}
+  .arrow{display:block;justify-self:center;transform:rotate(90deg);font-size:18px;line-height:1}
+  .caption{font-size:13px;line-height:1.45}
+  .takeaway{padding:16px;margin-top:18px}
+  .takeaway p{font-size:15px}
+  footer{font-size:13px;padding:20px 16px}
+}
+@media(max-width:360px){
+  .metrics{grid-template-columns:1fr}
+  .case h2{font-size:26px}
+  .mark{font-size:16px}
+}
 </style>
 </head>
 <body>
